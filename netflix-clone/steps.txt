@@ -12,3 +12,155 @@
 then inported - import SearchIcon from '@mui/icons-material/Search';
 
 cd "C:\Users\User\OneDrive\Desktop\Evangadii\Evangadi\phase4\Netflix_clone_2025\netflix-clone"
+
+3)$ git add .
+git commit -m "Header and Footer added"
+$ git push
+4) cominmg the movies is the next step
+important links and package we should download:
+1. tmdbd please get the API from this websites and make sure you register before you initiate.
+2. npm install react-youtube
+3. npm install movie-trailer
+4. npm install react-icons
+
+https://www.themoviedb.org/signup Elu_TMDB
+
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZmExZDY0NGFkMzJlODRkNjBiYWQ5MzhkNzUwYTYwNiIsIm5iZiI6MTc1NzI5ODUyMS41ODUsInN1YiI6IjY4YmUzZjU5MjM4MmEwMzMwYjljMDY5ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GPrqO0MsDPNgLl-wWRxta0pP4NvT898_Xjm_EEOhDBk
+
+bfa1d644ad32e84d60bad938d750a606
+
+
+then go to the main docmentation-ference-
+
+< utils, axios and requasted 
+
+npm install axios
+The axios.jsx file is where these requests will be made. Axios is a popular JavaScript library used to make HTTP requests (like fetching data from an API). It simplifies the process of sending and receiving data compared to the native fetch API.
+
+nothing will show up in your browser when you navigate to https://api.themoviedb.org/3.
+
+This is because it's not a public website designed to be viewed in a browser. It's an API endpoint, which is a URL specifically designed for applications (like your Netflix clone) to send requests to and receive data back in a machine-readable format, such as JSON.
+
+- getted the movies json https://api.themoviedb.org/3/trending/all/week?api_key=bfa1d644ad32e84d60bad938d750a606&language=en-US
+
+To see the image, you must combine that file path with the correct base URL for images.
+
+Here's the correct format:
+https://image.tmdb.org/t/p/w500/ + pj1wFbZF3gpEg7F0EreXTvZNZTG.jpg
+
+The full URL would be:
+https://image.tmdb.org/t/p/w500/pj1wFbZF3gpEg7F0EreXTvZNZTG.jpg
+
+
+go on generse>movie list> when we try it it give me id of each
+
+we grap id from this {
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 99,
+      "name": "Documentary"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10751,
+      "name": "Family"
+    },
+    {
+      "id": 14,
+      "name": "Fantasy"
+    },
+    {
+      "id": 36,
+      "name": "History"
+    },
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 10402,
+      "name": "Music"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 878,
+      "name": "Science Fiction"
+    },
+    {
+      "id": 10770,
+      "name": "TV Movie"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 10752,
+      "name": "War"
+    },
+    {
+      "id": 37,
+      "name": "Western"
+    }
+  ]
+}const url = 'https://api.themoviedb.org/3/genre/movie/list?language=en';
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZmExZDY0NGFkMzJlODRkNjBiYWQ5MzhkNzUwYTYwNiIsIm5iZiI6MTc1NzI5ODUyMS41ODUsInN1YiI6IjY4YmUzZjU5MjM4MmEwMzMwYjljMDY5ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GPrqO0MsDPNgLl-wWRxta0pP4NvT898_Xjm_EEOhDBk'
+  }
+};
+
+fetch(url, options)
+  .then(res => res.json())
+  .then(json => console.log(json))
+  .catch(err => console.error(err));
+
+
+  4) i do not want to be tracked my api key so the next step is to out fron requaste  i creqate .env file neer to git ignore ,
+  1. Create and Configure the .env File
+Create a new file in the root directory of your project (the same location as your package.json file). Name it .env.
+
+for react app REACT_APP_TMDB_API_KEY=YOUR_API_KEY_HERE
+use process.env to access the variable you created.
+
+Correct Command for Vite
+In your .env file, the command should be:
+
+VITE_TMDB_API_KEY=YOUR_API_KEY_HERE
+using import.meta.env instead of process.env.
+
+then result of now work pushed to github
+
+6)
