@@ -4,22 +4,32 @@
     display: flex;
     justify-content: center;
     
-    margin-left: 100px;
+    /* margin-left: 100px; */
+    padding: 2% 4%; /* Use fluid padding to control spacing */
 }
 
-.second-div{
-    width: 60%;
-    /* background-color: red; */
-
+.second-div {
+  width: 90%; /* Use a flexible width */
+  max-width: 900px; /* To prevent it from getting too wide on large screens */
 }
-.footer-icons{
-    /* background-color: rgb(94, 94, 172); */
+/* .footer-icons{
+    
     width: 12%;
     display: flex;
     justify-content: space-between;
    
     margin-left: 20px;
     color: #fff;
+} */
+
+.footer-icons {
+  width: 100%; /* Make the icon container responsive */
+  display: flex;
+  justify-content: space-between;
+  max-width: 200px; /* Set a max-width to keep icons grouped */
+  color: #fff;
+  margin-left: 0; /* Remove fixed margin */
+  margin-bottom: 20px;
 }
 .footer-data{
     display: flex;
@@ -49,4 +59,23 @@
 .copy-wright{
     font-size: 12px;
     margin-bottom: 10px;
+}
+
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .footer-data {
+    flex-direction: column; /* Stacks the footer links vertically */
+    align-items: center;
+  }
+
+  .footer-data ul {
+    height: auto;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .footer-icons {
+    justify-content: space-around;
+  }
 }

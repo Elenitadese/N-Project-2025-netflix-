@@ -1,18 +1,25 @@
 .outer_div {
   width: 100%;
 }
+/* This container is fine, but it's not strictly needed for the layout */
 
 .First_div {
+  /* This is the main container that uses flexbox for a responsive layout */
   display: flex;
   justify-content: space-between;   /* logo + nav stay centered */
   align-items: center;
-  position: sticky;
+   position: absolute; /* Place the header on top of the banner */
   top: 0;
-  background-color: rgba(20, 20, 20, 0.9);
-  /* background-color: transparent; */
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  
+  background-color: transparent;
   height: 10vh;
   z-index: 1000;
   color: white;
+
+  padding: 0 4%; /* Use fluid padding to create space on the sides */
 }
 
 /* Center (logo + nav links together) */
@@ -20,10 +27,9 @@
   display: flex;
   align-items: center;
   gap: 2rem;
-  margin-left: 200px;
+  /* margin-left: 200px; */
 }
-
-.header_center img {
+.netflix-logo { /* You had this class in your HTML, so let's use it for styling */
   height: 45px;
   object-fit: contain;
 }
@@ -46,10 +52,11 @@
   color: #e50914; /* Netflix red */
 }
 
-/* Right icons */
+/* Correct the .header_right selector */
 .header_right {
-  position: absolute;
-  right: 100px; /* stick to right corner */
+  display: flex;
+  align-items: center; /* Align the icons vertically */
+  /* Remove position: absolute and right: 100px; */
 }
 
 .icon_links {
@@ -69,4 +76,29 @@
 
 .icon_links li :hover {
   color: #e50914; /* Netflix red */
+}
+/* Media query for smaller screens (e.g., tablets and phones) */
+@media screen and (max-width: 800px) {
+  .First_div {
+    flex-direction: column; /* Stacks the child elements vertically */
+    height: auto; /* Allows the height to adjust to the content */
+    padding: 1rem 4%; /* Adds vertical padding */
+  }
+
+  .header_center {
+    flex-direction: column; /* Stacks the logo and nav links */
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .nav_links {
+    flex-direction: column; /* Stacks the navigation links */
+    gap: 10px; /* Reduces the space between links */
+  }
+
+  .header_right {
+    margin-top: 1rem;
+    align-self: center; /* Centers the right icons */
+  }
 }
