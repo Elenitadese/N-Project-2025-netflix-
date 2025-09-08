@@ -164,3 +164,91 @@ using import.meta.env instead of process.env.
 then result of now work pushed to github
 
 6)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Project Progress Summary 🚀
+1. Project Setup & Version Control
+- initialized a local Git repository and connected it to a GitHub repository, committing and pushing your code.
+-created a React project using Vite.
+npm create vite@latest netflix-clone -- --template react
+cd netflix-clone
+npm install
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/your-username/netflix-clone.git
+git push -u origin main
+
+2. Installing Dependencies
+
+installed Material UI and its dependencies (@mui/material, @emotion/react, @emotion/styled) for building the user interface.
+Material UI (MUI): You installed MUI for its core components (like buttons and cards) and styling engine using:
+npm install @mui/material @emotion/react @emotion/styled
+
+MUI Icons: You installed the icon library to use icons like the search icon:
+npm install @mui/icons-material
+
+Axios: You installed Axios for making API requests:
+npm install axios
+
+Other Packages: You also installed packages for future steps, including:
+npm install react-youtube
+npm install movie-trailer
+npm install react-icons
+
+3. API & Data Configuration
+
+registered on The Movie Database (TMDB) and obtained a personal API key from your account settings. You recognized that the TMDB website and API endpoints are separate.
+
+Environment Variables: To protect your API key from being exposed on GitHub, you created a .env file and stored your key with the correct Vite prefix:
+
+File: .env
+
+Content: VITE_TMDB_API_KEY=YOUR_ACTUAL_API_KEY_HERE
+
+.gitignore File: You added .env to your .gitignore file to ensure the API key is not committed to your public repository.
+
+Axios Configuration: You created a file to configure a centralized Axios instance with the correct base URL.
+
+File: src/axios.js
+import axios from 'axios';
+
+const instance = axios.create({
+    baseURL: "https://api.themoviedb.org/3",
+});
+
+export default instance;
+Request Endpoints: You created a file to organize all your specific API requests.
+
+File: src/requests.js
+
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+
+const requests = {
+    fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
+    fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
+    // ... and so on for other categories
+};
+
+export default requests;
+Image URL: You understood that to display images, you must combine the poster_path or backdrop_path with the TMDB base image URL, like this: https://image.tmdb.org/t/p/w500/pj1wFbZF3gpEg7F0EreXTvZNZTG.jpg
+
+
+git add .
+git commit -m "Added API configuration (axios and requests) and a test file"
+git push 
