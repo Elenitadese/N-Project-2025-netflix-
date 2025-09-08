@@ -1,0 +1,14 @@
+2)npm install @mui/icons-material,   
+
+-npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
+🔹 Explanation:
+
+@mui/material → Core Material UI components (Buttons, Cards, etc.)
+
+@emotion/react and @emotion/styled → Styling engine MUI depends on
+
+@mui/icons-material → Material Design icons
+
+then inported - import SearchIcon from '@mui/icons-material/Search';
+
+cd "C:\Users\User\OneDrive\Desktop\Evangadii\Evangadi\phase4\Netflix_clone_2025\netflix-clone"

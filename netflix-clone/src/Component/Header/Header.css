@@ -1,0 +1,72 @@
+.outer_div {
+  width: 100%;
+}
+
+.First_div {
+  display: flex;
+  justify-content: space-between;   /* logo + nav stay centered */
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: rgba(20, 20, 20, 0.9);
+  /* background-color: transparent; */
+  height: 10vh;
+  z-index: 1000;
+  color: white;
+}
+
+/* Center (logo + nav links together) */
+.header_center {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-left: 200px;
+}
+
+.header_center img {
+  height: 45px;
+  object-fit: contain;
+}
+
+/* Navigation links */
+.nav_links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_links li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav_links li:hover {
+  color: #e50914; /* Netflix red */
+}
+
+/* Right icons */
+.header_right {
+  position: absolute;
+  right: 100px; /* stick to right corner */
+}
+
+.icon_links {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.icon_links li {
+  cursor: pointer;
+  font-size: 1.6rem;
+  
+ 
+}
+
+.icon_links li :hover {
+  color: #e50914; /* Netflix red */
+}
