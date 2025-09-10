@@ -251,7 +251,7 @@ Image URL: You understood that to display images, you must combine the poster_pa
 
 git add .
 git commit -m "Added API configuration (axios and requests) and a test file"
-git push 
+git push /git push origin main
 
 
 
