@@ -38,7 +38,8 @@ const Banner = () => {
       <div
         className="banner-div"
         style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/original${Movie.backdrop_path})`,
+          backgroundImage: `url(https://image.tmdb.org/t/p/original${Movie.backdrop_path} )`,
+          $: "none"
         }}
       >
         <div className="banner_contents">
@@ -54,9 +55,8 @@ const Banner = () => {
             {truncate(Movie?.overview, 150)}
           </h1>
         </div>
-        
-        <div className="banner_fadeBottom" />
 
+        <div className="banner_fadeBottom" />
       </div>
     </>
   );

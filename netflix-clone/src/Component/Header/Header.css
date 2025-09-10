@@ -1,6 +1,12 @@
 .outer_div {
   width: 100%;
-  position: sticky;
+  position: fixed;
+  background-color: transparent ; 
+  background-color: rgba(20, 20, 20, 0.9);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 /* This container is fine, but it's not strictly needed for the layout */
 
@@ -9,14 +15,7 @@
   display: flex;
   justify-content: space-between;   /* logo + nav stay centered */
   align-items: center;
-   position:sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
   
-  background-color: transparent;
-  /* background-color: black; */
   height: 10vh;
   z-index: 1000;
   color: white;
