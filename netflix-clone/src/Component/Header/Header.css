@@ -1,5 +1,6 @@
 .outer_div {
   width: 100%;
+  position: sticky;
 }
 /* This container is fine, but it's not strictly needed for the layout */
 
@@ -8,14 +9,14 @@
   display: flex;
   justify-content: space-between;   /* logo + nav stay centered */
   align-items: center;
-   position: absolute; /* Place the header on top of the banner */
+   position:sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
   
-  /* background-color: transparent; */
-  background-color: black;
+  background-color: transparent;
+  /* background-color: black; */
   height: 10vh;
   z-index: 1000;
   color: white;

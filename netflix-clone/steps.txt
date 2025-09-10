@@ -260,3 +260,32 @@ git push /git push origin main
 
 rrailer - npm install movie-trailer
 react-youtube - npm install react-youtube
+
+
+Step 1: Install gh-pages - npm install gh-pages 
+     This command adds gh-pages to your package.json file, so the project knows what to do when you run the deploy script.
+
+Step 2: "homepage": "https://githubusername.github.io.Repository name ",
+      Update package.json - Include the homepage on your package.json
+      must specify your app's live URL and add the deployment scripts.
+Ex - "homepage": "https://Elenitadese.github.io/Netflix_clone_2025",
+
+Step 3 : 
+ must add two new scripts, predeploy and deploy, to  package.json file, after start and before build
+ 
+"predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+
+Step 4: Configure vite.config.js - base: 'Repository name'
+
+
+     Vite assumes your app is at the root (/), but GitHub Pages serves it from a subdirectory (/<repository-name>).
+
+
+Open vite.config.js and add the base property to the defineConfig object.
+
+ ex - base: '/Netflix_clone_2025/'
+
+Step 4: Deploy Your App - This command will automatically run the build process and then push your app to the gh-pages branch of your repository
+
+npm run deploy
