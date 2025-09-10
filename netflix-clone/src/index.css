@@ -1,24 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
-  --font-base: 'Lexend', sans-serif;
-  --font-second-base: 'Inter', sans-serif;
-  --bg-color: #111;
-  --primary-color: #ffffff;
-  --secondary-color: #e50914; /* Netflix red */
-}
-* {
-  /* list-style: none; */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    --font-base: 'Lexend', sans-serif;
+    --font-second-base: 'Inter', sans-serif;
+    --bg-color: #111;
+    --primary-color: #ffffff;
+    --secondary-color: #e50914;
 }
 
 body {
-  font-family: var(--font-base);
-  background-color: var(--bg-color);
-  color: var(--primary-color);
-}
-h1 {
-  font-family: var(--font-second-base);
-  color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #111;
 }
