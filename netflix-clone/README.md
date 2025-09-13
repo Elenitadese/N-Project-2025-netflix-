@@ -1,12 +1,65 @@
-# React + Vite
+Netflix Clone Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Netflix Clone, a front-end web application that mimics the design and core features of the popular streaming platform, built with React and Vite.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Component-Based Architecture: Built with React, the project uses a component-based structure for better reusability and maintainability.
 
-## Expanding the ESLint configuration
+Efficient Development: Utilizing Vite, the development environment provides a fast and efficient experience with features like hot module replacement.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Technologies Used
+Frontend:
+React
+Vite
+
+Getting Started
+To get a copy of the project up and running on your local machine, follow these simple steps.
+
+Prerequisites
+You need to have Node.js and npm installed on your machine.
+
+Node.js
+
+Installation
+Clone the repository:
+
+git clone [https://github.com/Elenitadese/N-Project-2025-netflix-.git](https://github.com/Elenitadese/N-Project-2025-netflix-.git)
+
+Navigate into the project directory:
+
+cd N-Project-2025-netflix-
+Install dependencies:
+npm install
+
+Running the App
+Run the following command to start the development server and view the application in your browser.
+
+npm run dev
+
+Deployment
+This project is configured to be deployed to GitHub Pages.
+
+-Install the gh-pages package:
+ -npm install gh-pages --save-dev
+
+Add the homepage and deployment scripts to your package.json file:
+
+"homepage": "https://[your-github-username].github.io/N-Project-2025-netflix-",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
+
+Run the deploy command:
+
+npm run deploy
+
+Live Project URL
+You can view the live project here:
+https://elenitadese.github.io/N-Project-2025-netflix-/
+
+Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+License
+This project is licensed under the MIT License.
