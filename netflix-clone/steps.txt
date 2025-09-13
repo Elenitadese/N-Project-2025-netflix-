@@ -315,6 +315,7 @@ Vite assumes your app is served from the root, but GitHub Pages serves it from a
 Step 5: Deploy Your App
 Run the following command to automatically build and push your app to the gh-pages branch:
       npm run deploy
+      npm run build
 
 Then check the Pages settings in your GitHub repository
 
