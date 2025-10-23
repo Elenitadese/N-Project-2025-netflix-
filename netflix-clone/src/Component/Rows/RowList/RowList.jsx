@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
 import Row from '../Row/Row'
-import Requastes from '../../../Utils/Requastes'
-
+import Requastes from "../../../Utils/Requastes";
 
 const RowList = () => {
   return (
@@ -11,7 +10,7 @@ const RowList = () => {
         fetchUrl={Requastes.fetchNetflixOriginals}
         isLargeRow={true}
       />
-      
+
       <Row title="Trending Now" fetchUrl={Requastes.fetchTrending} />
       <Row title="Top Rated" fetchUrl={Requastes.fetchTopRated} />
       <Row title="Movies" fetchUrl={Requastes.fetchActionMovies} />
@@ -23,6 +22,6 @@ const RowList = () => {
       {/*  */}
     </>
   );
-}
+};
 
-export default RowList
+export default RowList;
